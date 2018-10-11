@@ -1,9 +1,9 @@
 version: "3"
 services:
   cron:
-    image: alpine_test:latest
+    image: srolskyi/dcron
     volumes:
-      - ./log/cron.log:/var/log/dcron
+      - ./log/dcron:/var/log/dcron
       - ./rules/root:/etc/crontabs/root
       - ./files:/home/node
     network_mode: "host"
